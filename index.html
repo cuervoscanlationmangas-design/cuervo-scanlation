@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cuervo Scanlation — Lector de manga en español</title>
+  <meta name="description" content="Cuervo Scanlation — traducciones de manga y manhwa al español. Comunidad de cuervos dedicada a brindar una lectura cómoda y rápida.">
+  <meta name="keywords" content="manga, manhwa, español, lectura, scanlation, cuervo, cuervos, nórdico">
+  <meta property="og:title" content="Cuervo Scanlation — Lector de manga en español">
+  <meta property="og:description" content="¡Bienvenid@s a la comunidad de cuervos! Lee mangas y manhwas en español.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/og-cover.jpg">
+  <link rel="icon" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050b16; --surface:#0b1628; --muted:#8aa2c1; --text:#e5eefc;
+      --brand:#2f6fe0; --brand2:#3fb9f0; --radius:16px; --gap:16px;
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#081123);color:var(--text)}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin-inline:auto}
+
+    header{position:sticky;top:0;z-index:10;background:rgba(5,11,22,.85);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.05)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:800}
+    .logo-img{width:32px;height:32px;border-radius:10px;object-fit:contain;box-shadow:0 6px 18px rgba(53,132,228,.35)}
+    .nav-links{display:flex;gap:1rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.16);padding:.6rem .9rem;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));font-weight:600}
+    .btn:hover{border-color:rgba(255,255,255,.28)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));border:none;color:#06101c;font-weight:700}
+
+    .section{padding:28px 0}
+    h1{font-size: clamp(1.6rem, 4vw, 2.6rem);line-height:1.15;margin:.2rem 0 1rem}
+    h2{font-size: clamp(1.2rem, 2.6vw, 1.8rem);margin:0 0 .8rem}
+    .lead{color:var(--muted)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:var(--gap)}
+    .tile{position:relative}
+    .thumb{aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#0e1426;display:grid;place-items:center;color:var(--muted)}
+    .tile .title{margin-top:.4rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .badge{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.55);backdrop-filter: blur(3px);padding:.25rem .5rem;border-radius:999px;font-size:.75rem;border:1px solid rgba(255,255,255,.2)}
+
+    .chapter-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .select{padding:.5rem .7rem;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0f1627;color:var(--text)}
+    .reader{display:grid;gap:12px}
+    .reader img{width:min(980px,100%);margin-inline:auto;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+
+    footer{background:var(--surface);border-top:1px solid rgba(255,255,255,.08);padding:20px 0;margin-top:30px;text-align:center;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#/">
+        <img class="logo-img" src="assets/logo-cuervo.png" alt="Cuervo Scanlation" />
+        <span>Cuervo Scanlation</span>
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#/">Inicio</a>
+        <a href="#/series">Series</a>
+        <a href="#/rankings">Rankings</a>
+        <a href="#/capitulos">Capítulos</a>
+      </nav>
+      <a class="btn btn-primary" href="#/apoya">Apóyanos</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="home">
+      <h1>¡Bienvenid@s a la comunidad de cuervos!</h1>
+      <p class="lead">Somos <strong>Cuervo Scanlation</strong>. Si tienes <em>dudas, quejas o recomendaciones</em>, visita nuestro <a href="#/contacto">centro de contacto</a>.</p>
+      <div class="card" style="margin:14px 0;padding:12px;display:flex;gap:12px;align-items:center;justify-content:space-between">
+        <span>Actualizaciones periódicas · Lector optimizado para móvil · Tema azul oscuro</span>
+        <a class="btn" href="#/series">Ver series</a>
+      </div>
+    </section>
+
+    <section class="section" id="app"></section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Cuervo Scanlation · Sitio de fans, no oficial.</p>
+    </div>
+  </footer>
+
+  <!-- DATA de ejemplo: cambia estas series por las tuyas -->
+  <script>
+    const SERIES = [
+      { id:"dios-caotico", titulo:"El Dios Caótico", portada:"https://picsum.photos/300/400?random=1", estado:"Activo",
+        tags:["Acción","Fantasia"], resumen:"Un joven despierta un poder caótico y cambia el destino del mundo.",
+        capitulos:[{num:1, imagenes:["https://picsum.photos/800/1200?random=11","https://picsum.photos/800/1200?random=12"]}] },
+      { id:"murim-loco", titulo:"Murim Loco", portada:"https://picsum.photos/300/400?random=2", estado:"Activo",
+        tags:["Artes Marciales","Comedia"], resumen:"Caos en el mundo Murim con técnicas inusuales.",
+        capitulos:[{num:2, imagenes:["https://picsum.photos/800/1200?random=21"]}] },
+      { id:"maestro-infierno", titulo:"Regreso del Maestro del Infierno", portada:"https://picsum.photos/300/400?random=3", estado:"Hiatus",
+        tags:["Sobrenatural"], resumen:"Un maestro regresa del inframundo con deudas que saldar.",
+        capitulos:[{num:1, imagenes:["https://picsum.photos/800/1200?random=31"]}] }
+    ];
+  </script>
+
+  <!-- APP simple con ruteo -->
+  <script>
+    const $app = document.getElementById('app');
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const routes = { '/': renderHome, '/series': renderSeries, '/rankings': renderRankings, '/capitulos': renderLastChapters, '/serie': renderSerie, '/leer': renderReader, '/apoya': renderSupport, '/contacto': renderContact };
+    function navigate(){ const hash = location.hash.replace('#',''); const [path, query] = hash.split('?'); (routes[path || '/']||renderHome)(new URLSearchParams(query)); window.scrollTo({top:0,behavior:'instant'}); }
+    window.addEventListener('hashchange', navigate); window.addEventListener('DOMContentLoaded', ()=>{ if(!location.hash) location.hash='#/'; navigate(); });
+
+    const fmt = (n)=> new Intl.NumberFormat('es-MX').format(n);
+    const byViews = (a,b)=> (b.vistas||0)-(a.vistas||0);
+
+    function seriesGrid(series){
+      return `<div class="grid">${series.map(s=>`
+        <a class="tile" href="#/serie?id=${s.id}">
+          <span class="badge">${s.estado}</span>
+          <div class="thumb">${s.portada?`<img loading="lazy" src="${s.portada}" alt="Portada de ${s.titulo}">`:'Portada'}</div>
+          <div class="title">${s.titulo}</div>
+        </a>`).join('')}</div>`
+    }
+
+    function chaptersList(series){
+      const caps = [...series.capitulos].sort((a,b)=>b.num-a.num);
+      return `<div class="list">${caps.map(c=>`
+        <a class="btn" style="margin:.25rem 0" href="#/leer?id=${series.id}&n=${c.num}">
+          Capítulo ${c.num} · ${c.imagenes.length} páginas
+        </a>`).join('')}</div>`
+    }
+
+    function renderHome(){
+      const nuevos = SERIES.flatMap(s=> s.capitulos.map(c=>({serie:s, cap:c})))
+                            .sort((a,b)=> b.cap.num-a.cap.num).slice(0,8);
+      $app.innerHTML = `
+        <section class="section">
+          <h2>Nuevos lanzamientos</h2>
+          <div class="grid">${nuevos.map(x=>`
+            <a class="tile" href="#/leer?id=${x.serie.id}&n=${x.cap.num}">
+              <div class="thumb"><img loading="lazy" src="${x.serie.portada}" alt="${x.serie.titulo}"></div>
+              <div class="title">${x.serie.titulo} — Cap. ${x.cap.num}</div>
+            </a>`).join('')}</div>
+        </section>`;
+    }
+
+    function renderSeries(){ $app.innerHTML = `<section class="section"><h2>Todas las series</h2>${seriesGrid(SERIES)}</section>`; }
+    function renderRankings(){
+      const rank = SERIES.map(s=> ({...s, vistas: Math.floor(Math.random()*1e6)+1e5})).sort(byViews);
+      $app.innerHTML = `<section class="section"><h2>Top Series</h2>
+        <div class="card" style="padding:12px">${rank.slice(0,10).map((s,i)=>`<div>${i+1}. ${s.titulo} — <span class="lead">${fmt(s.vistas)} vistas</span></div>`).join('')}</div>
+      </section>`;
+    }
+    function renderLastChapters(){
+      const list = SERIES.flatMap(s=> s.capitulos.map(c=>({serie:s, cap:c}))).sort((a,b)=> b.cap.num-a.cap.num);
+      $app.innerHTML = `<section class="section"><h2>Todos los capítulos</h2>
+        <div class="card" style="padding:12px">${list.map(x=>`<div style="margin:.3rem 0"><a href="#/leer?id=${x.serie.id}&n=${x.cap.num}">${x.serie.titulo} — Cap. ${x.cap.num}</a> <span class="lead">(${x.cap.imagenes.length} págs.)</span></div>`).join('')}</div>
+      </section>`;
+    }
+    function renderSerie(params){
+      const id = params.get('id'); const s = SERIES.find(x=>x.id===id);
+      if(!s){ $app.innerHTML = '<p>No encontrado.</p>'; return; }
+      $app.innerHTML = `<section class="section" style="display:grid;grid-template-columns:1fr .9fr;gap:16px">
+        <div><div class="thumb" style="max-width:320px">${s.portada?`<img src="${s.portada}" alt="Portada de ${s.titulo}">`:'Portada'}</div></div>
+        <div><h2>${s.titulo}</h2><p class="lead">${s.resumen}</p><p class="lead">Estado: <strong>${s.estado}</strong> · Tags: ${s.tags.join(', ')}</p>
+        <h3>Capítulos</h3>${chaptersList(s)}</div></section>`;
+    }
+    function renderReader(params){
+      const id = params.get('id'); const n = Number(params.get('n'));
+      const s = SERIES.find(x=>x.id===id); if(!s){ $app.innerHTML = '<p>Serie no encontrada.</p>'; return; }
+      const cap = s.capitulos.find(c=>c.num===n); if(!cap){ $app.innerHTML = '<p>Capítulo no encontrado.</p>'; return; }
+      const idx = s.capitulos.findIndex(c=>c.num===n); const prev = s.capitulos[idx+1]?.num; const next = s.capitulos[idx-1]?.num;
+      $app.innerHTML = `<section class="section"><div class="chapter-head">
+        <a class="btn" href="#/serie?id=${s.id}">⟵ Volver a ${s.titulo}</a>
+        <div style="display:flex;gap:8px;align-items:center">
+          ${prev!==undefined?`<a class="btn" href="#/leer?id=${s.id}&n=${prev}">◀ Cap. ${prev}</a>`:''}
+          <label class="lead" for="selCap">Ir a</label>
+          <select id="selCap" class="select">${s.capitulos.map(c=>`<option ${c.num===n?'selected':''} value="${c.num}">Cap. ${c.num}</option>`).join('')}</select>
+          ${next!==undefined?`<a class="btn" href="#/leer?id=${s.id}&n=${next}">Cap. ${next} ▶</a>`:''}
+        </div></div>
+        <div class="reader">${cap.imagenes.map(src=>`<img loading="lazy" src="${src}" alt="${s.titulo} — Capítulo ${n}">`).join('')}</div></section>`;
+      document.getElementById('selCap').addEventListener('change', (e)=>{ location.hash = `#/leer?id=${s.id}&n=${e.target.value}`; });
+    }
+    function renderSupport(){ $app.innerHTML = `<section class="section"><h2>Apoya el proyecto</h2>
+      <p class="lead">Si te gusta el sitio, puedes colaborar con una donación simbólica o unirte al Discord.</p>
+      <div class="card" style="padding:12px;display:grid;gap:8px">
+        <a class="btn" href="#" target="_blank"><strong>Patreon</strong></a>
+        <a class="btn" href="#" target="_blank"><strong>Ko-fi</strong></a>
+        <a class="btn" href="#" target="_blank"><strong>Discord</strong></a>
+      </div></section>`; }
+    function renderContact(){ $app.innerHTML = `<section class="section"><h2>Contacto y soporte</h2>
+      <p class="lead">¿Dudas, quejas o recomendaciones? Escríbenos:</p>
+      <div class="card" style="padding:12px;display:grid;gap:8px">
+        <div>Correo: <a href="mailto:contacto@cuervoscanlation.com">contacto@cuervoscanlation.com</a></div>
+        <div>Discord: <a href="#" target="_blank">Invitación</a></div>
+      </div></section>`; }
+  </script>
+</body>
+</html>
